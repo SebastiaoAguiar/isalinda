@@ -3,31 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Para o Amor da Minha Vida </title>
-<link rel="stylesheet" href="style.css">
-  <!-- Fonte bonita -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+  <title>isalinda</title>
 
-  
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <header>
     <div>
       <h1>Para você, minha princesinha 💕</h1>
-      <p>
-        Tchamu bebellyzinha.
-      </p>
+      <p>Tchamu bebellyzinha.</p>
     </div>
   </header>
 
   <section>
     <h2>Olha nois bem beberes</h2>
     <div class="gallery">
-      <img src="img/foto1.jpeg" alt="Nós dois 1">
-      <img src="img/foto2.jpeg" alt="Nós dois 2">
-      <img src="img/foto3.jpeg" alt="Nós dois 3">
-      <img src="img/foto4.jpeg" alt="Nós dois 4">
+      <img src="img/foto1.jpeg">
+      <img src="img/foto2.jpeg">
+      <img src="img/foto3.jpeg">
+      <img src="img/foto4.jpeg">
     </div>
   </section>
 
@@ -39,15 +36,9 @@
   <section>
     <h2>Um Pouquinho do Que Sinto 💌</h2>
     <div class="textinho">
-      <p>
-        Não sei mais o que estar sozinho, você completou meus dias e é incrivel.
-      </p>
-      <p>
-        Cada momento ao seu lado é perfeito, e quero poder curar todos os seus machucadinhos e poder ser onde você encontra paz.
-      </p>
-      <p>
-        Obrigado por existir e deixar eu ser seu porto seguro. ❤️
-      </p>
+      <p>Não sei mais o que estar sozinho, você completou meus dias e é incrivel.</p>
+      <p>Cada momento ao seu lado é perfeito, e quero poder curar todos os seus machucadinhos.</p>
+      <p>Obrigado por existir e deixar eu ser seu porto seguro. ❤️</p>
     </div>
   </section>
 
@@ -56,7 +47,6 @@
   </footer>
 
   <script>
-    // ===== CONTADOR DE TEMPO JUNTOS =====
     const dataInicio = new Date('2024-10-03T00:00:00');
     const contador = document.getElementById('contador');
 
@@ -73,36 +63,16 @@
       const meses = Math.floor((dias % 365) / 30);
       const diasRestantes = (dias % 365) % 30;
 
-      const horasRestantes = horas % 24;
-      const minutosRestantes = minutos % 60;
-      const segundosRestantes = segundos % 60;
-
       contador.innerHTML = `
         <p>💖 Já estamos juntos há:</p>
         <p><strong>${anos}</strong> anos, <strong>${meses}</strong> meses e <strong>${diasRestantes}</strong> dias</p>
-        <p><strong>${horasRestantes}</strong> horas, <strong>${minutosRestantes}</strong> minutos e <strong>${segundosRestantes}</strong> segundos e contando...</p>
       `;
     }
 
     setInterval(atualizarContador, 1000);
     atualizarContador();
-
-    // ===== CORAÇÕES FLUTUANDO =====
-    function criarCoracao() {
-      const heart = document.createElement('div');
-      heart.classList.add('heart');
-      heart.innerHTML = '❤️';
-      heart.style.left = Math.random() * 100 + 'vw';
-      heart.style.fontSize = (Math.random() * 15 + 14) + 'px';
-      document.body.appendChild(heart);
-
-      setTimeout(() => {
-        heart.remove();
-      }, 6000);
-    }
-
-    setInterval(criarCoracao, 700);
   </script>
 
 </body>
 </html>
+
